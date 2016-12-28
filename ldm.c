@@ -1014,13 +1014,6 @@ main (int argc, char *argv[])
 		return EXIT_FAILURE;
 	}
 
-	if (g_callback_cmd && !g_file_test(g_callback_cmd, G_FILE_TEST_IS_EXECUTABLE)) {
-		fprintf(stderr, "The callback script isn't executable!\n");
-
-		free(g_callback_cmd);
-		g_callback_cmd = NULL;
-	}
-
 	if (!g_mount_path)
 		g_mount_path = strdup("/mnt");
 
